@@ -16,10 +16,17 @@ request('http://substack.net/images/', function (error, response, body) {
   //   console.log(url)
   			var permission_codes = [];
    		$('tr').each(function(i, elem){
-   			permission_
+
+   			// console.log(elem)
+   			  var perm = $(elem).find("code").first().text()
+   			  var url =  $(elem).find("a").attr("href")
+   			  var filetype = $(elem).find("a").text().split(".")[1]// you can just stack jquery, and call 1 when wanting the second element after the split
+   				// $("a").attr("href")
+   				console.log(filetype)
+   				// console.log(url)
 
    			});
    		}
-  }
-})
+  })
+
 
